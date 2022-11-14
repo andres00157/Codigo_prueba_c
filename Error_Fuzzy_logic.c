@@ -57,7 +57,7 @@ int main(){
     float input_1[3]= {100,3.6,0.77};
     float input_2[2]= {0,1.3};
     FILE* fichero;
-    fichero = fopen("data_Fuzzy_Error_C_10000.txt", "wt");
+    fichero = fopen("data_Fuzzy_Error_Raspberry_10000.txt", "wt");
 
     for(int i1 = 0; i1<MAX_ITE;i1++){
         printf("%d\n",i1);

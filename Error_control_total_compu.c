@@ -59,7 +59,7 @@ int cond_time_leap(float tiempo);
 int main(int argc, char const* argv[])
 {
     FILE* fichero;
-    fichero = fopen("datos_control_total_C.txt", "wt");
+    fichero = fopen("datos_control_total_Raspberry.txt", "wt");
 
 
     /// Inicializaciones
