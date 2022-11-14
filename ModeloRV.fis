@@ -1,0 +1,69 @@
+[System]
+Name='ModeloRV'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Disposición'
+Range=[0 5]
+NumMFs=5
+MF1='Incomodo':'gaussmf',[0.4111 0.166]
+MF2='Moderado_comodo':'gaussmf',[0.5521 3.6]
+MF3='Moderado_incomodo':'gaussmf',[0.5521 1.2]
+MF4='Neutro':'gaussmf',[0.5521 2.4]
+MF5='Comodo':'gaussmf',[0.5904 4.755]
+
+[Input2]
+Name='AmbienteRV'
+Range=[0 5]
+NumMFs=5
+MF1='Facil':'gaussmf',[0.4111 0.166]
+MF2='Moderado_Facil':'gaussmf',[0.5521 1.2]
+MF3='Medio':'gaussmf',[0.552 2.4]
+MF4='Moderado_Desafiante':'gaussmf',[0.5521 3.6]
+MF5='Desafiante':'gaussmf',[0.5903 4.755]
+
+[Output1]
+Name='AmbienteRV'
+Range=[0 5]
+NumMFs=5
+MF1='Facil':'gaussmf',[0.4111 0.166]
+MF2='Moderado_facil':'gaussmf',[0.5521 1.2]
+MF3='Medio':'gaussmf',[0.552 2.4]
+MF4='Modera_Desafiante':'gaussmf',[0.5521 3.6]
+MF5='Entorno_Desafiante':'gaussmf',[0.5903 4.755]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 2 (1) : 1
+1 4, 3 (1) : 1
+1 5, 4 (1) : 1
+3 1, 2 (1) : 1
+3 2, 2 (1) : 1
+3 3, 2 (1) : 1
+3 4, 3 (1) : 1
+3 5, 4 (1) : 1
+4 1, 2 (1) : 1
+4 2, 3 (1) : 1
+4 3, 3 (1) : 1
+4 4, 3 (1) : 1
+4 5, 4 (1) : 1
+2 1, 2 (1) : 1
+2 2, 3 (1) : 1
+2 3, 4 (1) : 1
+2 4, 4 (1) : 1
+2 5, 4 (1) : 1
+5 1, 2 (1) : 1
+5 2, 3 (1) : 1
+5 3, 4 (1) : 1
+5 4, 5 (1) : 1
+5 5, 5 (1) : 1
